@@ -4188,3 +4188,460 @@ Tasks: TOP => assets:precompile
  DEBUG [d01981f6] 	
  DEBUG [d01981f6] 	(See full trace by running task with --trace)
  DEBUG [d01981f6] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 16:28:44 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6a75c8be] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [6a75c8be] Command: [ -d ~/.rvm ]
+ DEBUG [6a75c8be] Finished in 2.556 seconds with exit status 1 (failed).
+ DEBUG [5a3da37e] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [5a3da37e] Command: [ -d /usr/local/rvm ]
+ DEBUG [5a3da37e] Finished in 2.457 seconds with exit status 0 (successful).
+ DEBUG [f854ae35] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [f854ae35] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [f854ae35] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [f854ae35] 	
+ DEBUG [f854ae35] Finished in 0.811 seconds with exit status 0 (successful).
+ DEBUG [b0bcdc82] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [b0bcdc82] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [b0bcdc82] 	ruby-2.3.0
+ DEBUG [b0bcdc82] 	
+ DEBUG [b0bcdc82] Finished in 0.819 seconds with exit status 0 (successful).
+ DEBUG [639cf5db] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [639cf5db] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [639cf5db] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [639cf5db] 	
+ DEBUG [639cf5db] Finished in 1.242 seconds with exit status 0 (successful).
+  INFO [abbc50ce] Running /usr/bin/env mkdir -p /tmp on 45.55.220.3
+ DEBUG [abbc50ce] Command: /usr/bin/env mkdir -p /tmp
+  INFO [abbc50ce] Finished in 0.378 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 100.0%
+  INFO [01a46f53] Running /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh on 45.55.220.3
+ DEBUG [01a46f53] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh
+  INFO [01a46f53] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [ba4fcb84] Running /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git on 45.55.220.3
+ DEBUG [ba4fcb84] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git )
+ DEBUG [ba4fcb84] 	cf25033ee15af6b03216675a28bb497fc68d1cc6
+ DEBUG [ba4fcb84] 		refs/heads/master
+  INFO [ba4fcb84] Finished in 1.138 seconds with exit status 0 (successful).
+  INFO [3ac3e128] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases on 45.55.220.3
+ DEBUG [3ac3e128] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases
+  INFO [3ac3e128] Finished in 0.493 seconds with exit status 0 (successful).
+  INFO [e28db1c1] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets on 45.55.220.3
+ DEBUG [e28db1c1] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets
+  INFO [e28db1c1] Finished in 0.406 seconds with exit status 0 (successful).
+ DEBUG [f8855ce2] Running [ -f /home/root/apps/bookshelf2/shared/puma.rb ] on 45.55.220.3
+ DEBUG [f8855ce2] Command: [ -f /home/root/apps/bookshelf2/shared/puma.rb ]
+ DEBUG [f8855ce2] Finished in 0.406 seconds with exit status 0 (successful).
+ DEBUG [7e79905b] Running [ -f /home/root/apps/bookshelf2/current/REVISION ] on 45.55.220.3
+ DEBUG [7e79905b] Command: [ -f /home/root/apps/bookshelf2/current/REVISION ]
+ DEBUG [7e79905b] Finished in 0.305 seconds with exit status 1 (failed).
+ DEBUG [dd5c66c8] Running [ -f /home/root/apps/bookshelf2/repo/HEAD ] on 45.55.220.3
+ DEBUG [dd5c66c8] Command: [ -f /home/root/apps/bookshelf2/repo/HEAD ]
+ DEBUG [dd5c66c8] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/root/apps/bookshelf2/repo
+ DEBUG [8e8f52cf] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [8e8f52cf] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [8e8f52cf] Finished in 0.414 seconds with exit status 0 (successful).
+  INFO [9ce91e97] Running /usr/bin/env git remote update --prune on 45.55.220.3
+ DEBUG [9ce91e97] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [9ce91e97] 	Fetching origin
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	remote: Counting objects: 8, done.[K
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	remote: Compressing objects: 100% (1/1)   [K
+ DEBUG [9ce91e97] 	remote: Compressing objects: 100% (1/1), done.[K
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	remote: Total 8 (delta 7), reused 8 (delta 7), pack-reused 0[K
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	Unpacking objects:  12% (1/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  25% (2/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  37% (3/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  50% (4/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  62% (5/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  75% (6/8)   
+ DEBUG [9ce91e97] 	Unpacking objects:  87% (7/8)   
+ DEBUG [9ce91e97] 	Unpacking objects: 100% (8/8)   
+ DEBUG [9ce91e97] 	Unpacking objects: 100% (8/8), done.
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	From github.com:breadwave/bookshelf2
+ DEBUG [9ce91e97] 	
+ DEBUG [9ce91e97] 	   818bfd1..cf25033  master     -> master
+ DEBUG [9ce91e97] 	
+  INFO [9ce91e97] Finished in 1.306 seconds with exit status 0 (successful).
+ DEBUG [04edbade] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [04edbade] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [04edbade] Finished in 0.526 seconds with exit status 0 (successful).
+  INFO [a5d598db] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203192857 on 45.55.220.3
+ DEBUG [a5d598db] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203192857 )
+  INFO [a5d598db] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [7517b1d9] Running /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203192857 on 45.55.220.3
+ DEBUG [7517b1d9] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203192857 )
+  INFO [7517b1d9] Finished in 0.826 seconds with exit status 0 (successful).
+ DEBUG [3e74b66e] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [3e74b66e] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [3e74b66e] Finished in 0.399 seconds with exit status 0 (successful).
+ DEBUG [4bd96e97] Running /usr/bin/env git rev-list --max-count=1 master on 45.55.220.3
+ DEBUG [4bd96e97] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [4bd96e97] 	cf25033ee15af6b03216675a28bb497fc68d1cc6
+ DEBUG [4bd96e97] 	
+ DEBUG [4bd96e97] Finished in 0.410 seconds with exit status 0 (successful).
+ DEBUG [985a5700] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203192857; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203192857'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [985a5700] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203192857; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203192857'" 1>&2; false; fi
+ DEBUG [985a5700] Finished in 0.412 seconds with exit status 0 (successful).
+  INFO [d36f0338] Running /usr/bin/env echo "cf25033ee15af6b03216675a28bb497fc68d1cc6" >> REVISION on 45.55.220.3
+ DEBUG [d36f0338] Command: cd /home/root/apps/bookshelf2/releases/20161203192857 && /usr/bin/env echo "cf25033ee15af6b03216675a28bb497fc68d1cc6" >> REVISION
+  INFO [d36f0338] Finished in 0.404 seconds with exit status 0 (successful).
+  INFO [40a51959] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203192857/public on 45.55.220.3
+ DEBUG [40a51959] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203192857/public
+  INFO [40a51959] Finished in 0.406 seconds with exit status 0 (successful).
+ DEBUG [f512fd53] Running [ -L /home/root/apps/bookshelf2/releases/20161203192857/public/assets ] on 45.55.220.3
+ DEBUG [f512fd53] Command: [ -L /home/root/apps/bookshelf2/releases/20161203192857/public/assets ]
+ DEBUG [f512fd53] Finished in 0.420 seconds with exit status 1 (failed).
+ DEBUG [24967c54] Running [ -d /home/root/apps/bookshelf2/releases/20161203192857/public/assets ] on 45.55.220.3
+ DEBUG [24967c54] Command: [ -d /home/root/apps/bookshelf2/releases/20161203192857/public/assets ]
+ DEBUG [24967c54] Finished in 0.396 seconds with exit status 1 (failed).
+  INFO [870c55b0] Running /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203192857/public/assets on 45.55.220.3
+ DEBUG [870c55b0] Command: /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203192857/public/assets
+  INFO [870c55b0] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [1b66da8d] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203192857; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203192857'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [1b66da8d] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203192857; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203192857'" 1>&2; false; fi
+ DEBUG [1b66da8d] Finished in 0.421 seconds with exit status 0 (successful).
+ DEBUG [54e88d6c] Running /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle on 45.55.220.3
+ DEBUG [54e88d6c] Command: cd /home/root/apps/bookshelf2/releases/20161203192857 && /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle
+ DEBUG [54e88d6c] 	[33mYour Gemfile lists the gem bcrypt (>= 0) more than once.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	You should probably keep only one of them.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[33mYour Gemfile lists the gem will_paginate (>= 0) more than once.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	You should probably keep only one of them.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[33mYour Gemfile lists the gem bootstrap-will_paginate (>= 0) more than once.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	You should probably keep only one of them.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[33mYour Gemfile lists the gem carrierwave (>= 0) more than once.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	You should probably keep only one of them.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[33mYour Gemfile lists the gem mini_magick (>= 0) more than once.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	You should probably keep only one of them.
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	Resolving dependencies...
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31mThe following gems are missing[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * sshkit (1.11.4)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * ansi (1.5.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * coderay (1.1.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * better_errors (2.1.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * will_paginate (3.1.5)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * bootstrap-will_paginate (0.0.10)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * byebug (9.0.6)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano-rails (1.2.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * json (2.0.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * carrierwave (0.11.2)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * ffi (1.9.14)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * listen (3.0.8)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * mini_magick (4.5.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * ruby-progressbar (1.8.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * minitest-reporters (1.1.12)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * rails-controller-testing (1.0.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * spring (2.0.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[31m * web-console (3.4.0)[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [54e88d6c] 	
+ DEBUG [54e88d6c] Finished in 2.067 seconds with exit status 1 (failed).
+  INFO [2dd35656] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet on 45.55.220.3
+ DEBUG [2dd35656] Command: cd /home/root/apps/bookshelf2/releases/20161203192857 && /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet
+ DEBUG [2dd35656] 	[31mYou are trying to install in deployment mode after changing
+ DEBUG [2dd35656] 	
+ DEBUG [2dd35656] 	your Gemfile. Run `bundle install` elsewhere and add the
+ DEBUG [2dd35656] 	
+ DEBUG [2dd35656] 	updated Gemfile.lock to version control.
+ DEBUG [2dd35656] 	
+ DEBUG [2dd35656] 	
+ DEBUG [2dd35656] 	You have deleted from the Gemfile:
+* bootstrap-sass
+* coffee-rails (~> 4.2)
+* sass-rails (~> 5.0)
+* uglifier (>= 1.3.0)[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 16:29:50 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [12d55a5e] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [12d55a5e] Command: [ -d ~/.rvm ]
+ DEBUG [12d55a5e] Finished in 2.556 seconds with exit status 1 (failed).
+ DEBUG [48ad2f07] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [48ad2f07] Command: [ -d /usr/local/rvm ]
+ DEBUG [48ad2f07] Finished in 2.576 seconds with exit status 0 (successful).
+ DEBUG [d20b40ea] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [d20b40ea] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [d20b40ea] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [d20b40ea] 	
+ DEBUG [d20b40ea] Finished in 0.801 seconds with exit status 0 (successful).
+ DEBUG [29790609] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [29790609] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [29790609] 	ruby-2.3.0
+ DEBUG [29790609] 	
+ DEBUG [29790609] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG [9f8a86d0] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [9f8a86d0] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [9f8a86d0] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [9f8a86d0] 	
+ DEBUG [9f8a86d0] Finished in 1.142 seconds with exit status 0 (successful).
+  INFO [bf2f85e3] Running /usr/bin/env mkdir -p /tmp on 45.55.220.3
+ DEBUG [bf2f85e3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bf2f85e3] Finished in 0.376 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 100.0%
+  INFO [64393e54] Running /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh on 45.55.220.3
+ DEBUG [64393e54] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh
+  INFO [64393e54] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [ac27869f] Running /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git on 45.55.220.3
+ DEBUG [ac27869f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git )
+ DEBUG [ac27869f] 	cf25033ee15af6b03216675a28bb497fc68d1cc6
+ DEBUG [ac27869f] 		
+ DEBUG [ac27869f] 	refs/heads/master
+  INFO [ac27869f] Finished in 2.659 seconds with exit status 0 (successful).
+  INFO [db88273a] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases on 45.55.220.3
+ DEBUG [db88273a] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases
+  INFO [db88273a] Finished in 0.525 seconds with exit status 0 (successful).
+  INFO [b712131d] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets on 45.55.220.3
+ DEBUG [b712131d] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets
+  INFO [b712131d] Finished in 0.384 seconds with exit status 0 (successful).
+ DEBUG [f4c17891] Running [ -f /home/root/apps/bookshelf2/shared/puma.rb ] on 45.55.220.3
+ DEBUG [f4c17891] Command: [ -f /home/root/apps/bookshelf2/shared/puma.rb ]
+ DEBUG [f4c17891] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [d638d3d9] Running [ -f /home/root/apps/bookshelf2/current/REVISION ] on 45.55.220.3
+ DEBUG [d638d3d9] Command: [ -f /home/root/apps/bookshelf2/current/REVISION ]
+ DEBUG [d638d3d9] Finished in 0.406 seconds with exit status 1 (failed).
+ DEBUG [e729daaf] Running [ -f /home/root/apps/bookshelf2/repo/HEAD ] on 45.55.220.3
+ DEBUG [e729daaf] Command: [ -f /home/root/apps/bookshelf2/repo/HEAD ]
+ DEBUG [e729daaf] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/root/apps/bookshelf2/repo
+ DEBUG [95afff4f] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [95afff4f] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [95afff4f] Finished in 0.405 seconds with exit status 0 (successful).
+  INFO [7f6dc9de] Running /usr/bin/env git remote update --prune on 45.55.220.3
+ DEBUG [7f6dc9de] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7f6dc9de] 	Fetching origin
+ DEBUG [7f6dc9de] 	
+  INFO [7f6dc9de] Finished in 1.744 seconds with exit status 0 (successful).
+ DEBUG [db9af5fb] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [db9af5fb] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [db9af5fb] Finished in 0.709 seconds with exit status 0 (successful).
+  INFO [bc26a074] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203193005 on 45.55.220.3
+ DEBUG [bc26a074] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203193005 )
+  INFO [bc26a074] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO [301b6d55] Running /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203193005 on 45.55.220.3
+ DEBUG [301b6d55] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203193005 )
+  INFO [301b6d55] Finished in 0.819 seconds with exit status 0 (successful).
+ DEBUG [a35befd9] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [a35befd9] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [a35befd9] Finished in 0.411 seconds with exit status 0 (successful).
+ DEBUG [6d230828] Running /usr/bin/env git rev-list --max-count=1 master on 45.55.220.3
+ DEBUG [6d230828] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6d230828] 	cf25033ee15af6b03216675a28bb497fc68d1cc6
+ DEBUG [6d230828] 	
+ DEBUG [6d230828] Finished in 0.400 seconds with exit status 0 (successful).
+ DEBUG [6eee028e] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203193005; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203193005'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [6eee028e] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203193005; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203193005'" 1>&2; false; fi
+ DEBUG [6eee028e] Finished in 0.412 seconds with exit status 0 (successful).
+  INFO [9768031b] Running /usr/bin/env echo "cf25033ee15af6b03216675a28bb497fc68d1cc6" >> REVISION on 45.55.220.3
+ DEBUG [9768031b] Command: cd /home/root/apps/bookshelf2/releases/20161203193005 && /usr/bin/env echo "cf25033ee15af6b03216675a28bb497fc68d1cc6" >> REVISION
+  INFO [9768031b] Finished in 0.401 seconds with exit status 0 (successful).
+  INFO [a08da907] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203193005/public on 45.55.220.3
+ DEBUG [a08da907] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203193005/public
+  INFO [a08da907] Finished in 0.406 seconds with exit status 0 (successful).
+ DEBUG [bd0e821a] Running [ -L /home/root/apps/bookshelf2/releases/20161203193005/public/assets ] on 45.55.220.3
+ DEBUG [bd0e821a] Command: [ -L /home/root/apps/bookshelf2/releases/20161203193005/public/assets ]
+ DEBUG [bd0e821a] Finished in 0.510 seconds with exit status 1 (failed).
+ DEBUG [bf48c8be] Running [ -d /home/root/apps/bookshelf2/releases/20161203193005/public/assets ] on 45.55.220.3
+ DEBUG [bf48c8be] Command: [ -d /home/root/apps/bookshelf2/releases/20161203193005/public/assets ]
+ DEBUG [bf48c8be] Finished in 0.409 seconds with exit status 1 (failed).
+  INFO [5b87bb84] Running /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203193005/public/assets on 45.55.220.3
+ DEBUG [5b87bb84] Command: /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203193005/public/assets
+  INFO [5b87bb84] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [ff206f4d] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203193005; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203193005'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [ff206f4d] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203193005; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203193005'" 1>&2; false; fi
+ DEBUG [ff206f4d] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [56fc8731] Running /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle on 45.55.220.3
+ DEBUG [56fc8731] Command: cd /home/root/apps/bookshelf2/releases/20161203193005 && /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle
+ DEBUG [56fc8731] 	[33mYour Gemfile lists the gem bcrypt (>= 0) more than once.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	You should probably keep only one of them.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[33mYour Gemfile lists the gem will_paginate (>= 0) more than once.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	You should probably keep only one of them.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[33mYour Gemfile lists the gem bootstrap-will_paginate (>= 0) more than once.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	You should probably keep only one of them.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[33mYour Gemfile lists the gem carrierwave (>= 0) more than once.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	You should probably keep only one of them.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[33mYour Gemfile lists the gem mini_magick (>= 0) more than once.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	You should probably keep only one of them.
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	Resolving dependencies...
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31mThe following gems are missing[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * sshkit (1.11.4)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * ansi (1.5.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * coderay (1.1.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * better_errors (2.1.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * will_paginate (3.1.5)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * bootstrap-will_paginate (0.0.10)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * byebug (9.0.6)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano-rails (1.2.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * json (2.0.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * carrierwave (0.11.2)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * ffi (1.9.14)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * listen (3.0.8)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * mini_magick (4.5.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * ruby-progressbar (1.8.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * minitest-reporters (1.1.12)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * rails-controller-testing (1.0.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * spring (2.0.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[31m * web-console (3.4.0)[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [56fc8731] 	
+ DEBUG [56fc8731] Finished in 2.463 seconds with exit status 1 (failed).
+  INFO [efd32a63] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet on 45.55.220.3
+ DEBUG [efd32a63] Command: cd /home/root/apps/bookshelf2/releases/20161203193005 && /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet
+ DEBUG [efd32a63] 	[31mYou are trying to install in deployment mode after changing
+ DEBUG [efd32a63] 	
+ DEBUG [efd32a63] 	your Gemfile. Run `bundle install` elsewhere and add the
+ DEBUG [efd32a63] 	
+ DEBUG [efd32a63] 	updated Gemfile.lock to version control.
+
+You have deleted from the Gemfile:
+* bootstrap-sass
+* coffee-rails (~> 4.2)
+* sass-rails (~> 5.0)
+* uglifier (>= 1.3.0)[0m
