@@ -1,0 +1,1227 @@
+# Logfile created on 2016-12-03 14:40:25 -0300 by logger.rb/53141
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 14:40:25 -0300 cap production deploy:setup
+  INFO ---------------------------------------------------------------------------
+ DEBUG [627d0113] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [627d0113] Command: [ -d ~/.rvm ]
+ DEBUG [627d0113] Finished in 2.458 seconds with exit status 1 (failed).
+ DEBUG [1aecb7f2] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [1aecb7f2] Command: [ -d /usr/local/rvm ]
+ DEBUG [1aecb7f2] Finished in 2.478 seconds with exit status 0 (successful).
+ DEBUG [cb301e8b] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [cb301e8b] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [cb301e8b] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [cb301e8b] 	
+ DEBUG [cb301e8b] Finished in 0.788 seconds with exit status 0 (successful).
+ DEBUG [3cc5ce0e] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [3cc5ce0e] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [3cc5ce0e] 	ruby-2.3.0
+ DEBUG [3cc5ce0e] 	
+ DEBUG [3cc5ce0e] Finished in 0.560 seconds with exit status 0 (successful).
+ DEBUG [4a393641] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [4a393641] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [4a393641] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [4a393641] 	
+ DEBUG [4a393641] Finished in 0.770 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 14:40:50 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [db17bbd1] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [db17bbd1] Command: [ -d ~/.rvm ]
+ DEBUG [db17bbd1] Finished in 2.458 seconds with exit status 1 (failed).
+ DEBUG [0f1f48ca] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [0f1f48ca] Command: [ -d /usr/local/rvm ]
+ DEBUG [0f1f48ca] Finished in 2.559 seconds with exit status 0 (successful).
+ DEBUG [9536e62c] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [9536e62c] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [9536e62c] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [9536e62c] 	
+ DEBUG [9536e62c] Finished in 0.546 seconds with exit status 0 (successful).
+ DEBUG [4cb7ca22] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [4cb7ca22] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [4cb7ca22] 	ruby-2.3.0
+ DEBUG [4cb7ca22] 	
+ DEBUG [4cb7ca22] Finished in 0.679 seconds with exit status 0 (successful).
+ DEBUG [358f1b95] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [358f1b95] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [358f1b95] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [358f1b95] 	
+ DEBUG [358f1b95] Finished in 0.929 seconds with exit status 0 (successful).
+  INFO [8497fea4] Running /usr/bin/env mkdir -p /tmp on 45.55.220.3
+ DEBUG [8497fea4] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8497fea4] Finished in 0.385 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 100.0%
+  INFO [0671752d] Running /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh on 45.55.220.3
+ DEBUG [0671752d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh
+  INFO [0671752d] Finished in 0.410 seconds with exit status 0 (successful).
+  INFO [e3d4a748] Running /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git on 45.55.220.3
+ DEBUG [e3d4a748] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git )
+ DEBUG [e3d4a748] 	9c11146258f4446991aedb5765c814670346831f
+ DEBUG [e3d4a748] 		refs/heads/master
+  INFO [e3d4a748] Finished in 1.125 seconds with exit status 0 (successful).
+  INFO [63d22fbe] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases on 45.55.220.3
+ DEBUG [63d22fbe] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases
+  INFO [63d22fbe] Finished in 0.610 seconds with exit status 0 (successful).
+  INFO [223a713c] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets on 45.55.220.3
+ DEBUG [223a713c] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets
+  INFO [223a713c] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [de10131d] Running [ -f /home/root/apps/bookshelf2/shared/puma.rb ] on 45.55.220.3
+ DEBUG [de10131d] Command: [ -f /home/root/apps/bookshelf2/shared/puma.rb ]
+ DEBUG [de10131d] Finished in 0.409 seconds with exit status 1 (failed).
+  WARN puma.rb NOT FOUND!
+ DEBUG Uploading /home/root/apps/bookshelf2/shared/puma.rb 0.0%
+  INFO Uploading /home/root/apps/bookshelf2/shared/puma.rb 100.0%
+  INFO puma.rb generated
+ DEBUG [35fa4f78] Running [ -f /home/root/apps/bookshelf2/current/REVISION ] on 45.55.220.3
+ DEBUG [35fa4f78] Command: [ -f /home/root/apps/bookshelf2/current/REVISION ]
+ DEBUG [35fa4f78] Finished in 0.409 seconds with exit status 1 (failed).
+ DEBUG [8e98a2d6] Running [ -f /home/root/apps/bookshelf2/repo/HEAD ] on 45.55.220.3
+ DEBUG [8e98a2d6] Command: [ -f /home/root/apps/bookshelf2/repo/HEAD ]
+ DEBUG [8e98a2d6] Finished in 0.405 seconds with exit status 1 (failed).
+ DEBUG [399b2bbc] Running if test ! -d /home/root/apps/bookshelf2; then echo "Directory does not exist '/home/root/apps/bookshelf2'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [399b2bbc] Command: if test ! -d /home/root/apps/bookshelf2; then echo "Directory does not exist '/home/root/apps/bookshelf2'" 1>&2; false; fi
+ DEBUG [399b2bbc] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [6d5badc0] Running /usr/bin/env git clone --mirror git@github.com:breadwave/bookshelf2.git /home/root/apps/bookshelf2/repo on 45.55.220.3
+ DEBUG [6d5badc0] Command: cd /home/root/apps/bookshelf2 && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git clone --mirror git@github.com:breadwave/bookshelf2.git /home/root/apps/bookshelf2/repo )
+ DEBUG [6d5badc0] 	Cloning into bare repository '/home/root/apps/bookshelf2/repo'...
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	remote: Counting objects: 1278, done.[K
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	remote: Compressing objects:   0% (1/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   1% (11/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   2% (22/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   3% (33/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   4% (44/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   5% (54/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   6% (65/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   7% (76/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   8% (87/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:   9% (98/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  10% (108/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  11% (119/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  12% (130/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  13% (141/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  14% (151/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  15% (162/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  16% (173/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  17% (184/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  18% (195/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  19% (205/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  20% (216/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  21% (227/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  22% (238/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  23% (248/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  24% (259/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  25% (270/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  26% (281/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  27% (292/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  28% (302/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  29% (313/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  30% (324/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  31% (335/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  32% (345/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  33% (356/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  34% (367/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  35% (378/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  36% (389/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  37% (399/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  38% (410/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  39% (421/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  40% (432/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  41% (442/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  42% (453/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  43% (464/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  44% (475/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  45% (486/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compress
+ DEBUG [6d5badc0] 	ing objects:  46% (496/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  47% (507/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  48% (518/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  49% (529/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  50% (539/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compress
+ DEBUG [6d5badc0] 	ing objects:  51% (550/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  52% (561/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  53% (572/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing obje
+ DEBUG [6d5badc0] 	cts:  54% (583/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  55% (593/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  56% (604/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  57
+ DEBUG [6d5badc0] 	% (615/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  58% (626/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  59% (637/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  60% (647/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  61% (658/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  62% (669/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  63% (680/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  64% (690/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  65% (701/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  66% (712/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  67% (723/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  68% (734/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  69% (744/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  70% (755/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  71% (766/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  72% (777/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  73% (787/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  74% (798/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  75% (809/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  76% (820/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  77% (831/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  78% (841/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  79% (852/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  80% (863/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  81% (874/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  82% (884/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  83% (895/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  84% (906/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  85% (917/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  86% (928/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  87% (938/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  88% (949/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  89% (960/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  90% (971/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  91% (981/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  92% (992/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  93% (1003/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  94% (1014/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  95% (1025/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  96% (1035/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  97% (1046/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  98% (1057/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects:  99% (1068/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects: 100% (1078/1078)   [K
+ DEBUG [6d5badc0] 	remote: Compressing objects: 100% (1078/1078), done.[K
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	Receiving objects:   0% (1/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   1% (13/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   2% (26/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   3% (39/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   4% (52/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   5% (64/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   6% (77/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   7% (90/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   8% (103/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:   9% (116/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  10% (128/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  11% (141/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  12% (154/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  13% (167/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  14% (179/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  15% (192/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  16% (205/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  17% (218/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  18% (231/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  19% (243/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  20% (256/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  21% (269/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  22% (282/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  23% (294/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  24% (307/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  25% (320/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  26% (333/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  27% (346/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  28% (358/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  29% (371/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  30% (384/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  31% (397/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  32% (409/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  33% (422/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  34% (435/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  35% (448/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  36% (461/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  37% (473/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  38% (486/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  39% (499/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  40% (512/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  41% (524/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  42% (537/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  43% (550/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  44% (563/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  45% (576/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  46% (588/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  47% (601/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  48% (614/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  49% (627/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  50% (639/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  51% (652/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  52% (665/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  53% (678/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  54% (691/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  55% (703/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  56% (716/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  57% (729/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  58% (742/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  59% (755/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  60% (767/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  61% (780/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  62% (793/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  63% (806/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  64% (818/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  65% (831/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  66% (844/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  67% (857/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  68% (870/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  69% (882/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  70% (895/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  71% (908/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  72% (921/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  73% (933/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  74% (946/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  75% (959/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  76% (972/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  77% (985/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  78% (997/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  79% (1010/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  80% (1023/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  81% (1036/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  82% (1048/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  83% (1061/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  84% (1074/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  85% (1087/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  86% (1100/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  87% (1112/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  88% (1125/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  89% (1138/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  90% (1151/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  91% (1163/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  92% (1176/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  93% (1189/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  94% (1202/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  95% (1215/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  96% (1227/1278)   
+ DEBUG [6d5badc0] 	remote: Total 1278 (delta 44), reused 1278 (delta 44), pack-reused 0[K
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	Receiving objects:  97% (1240/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  98% (1253/1278)   
+ DEBUG [6d5badc0] 	Receiving objects:  99% (1266/1278)   
+ DEBUG [6d5badc0] 	Receiving objects: 100% (1278/1278)   
+ DEBUG [6d5badc0] 	Receiving objects: 100% (1278/1278), 4.20 MiB | 0 bytes/s, done.
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	Resolving deltas:   0% (0/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:   2% (1/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:   4% (2/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:   6% (3/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  20% (9/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  22% (10/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  25% (11/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  27% (12/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  31% (14/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  36% (16/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  40% (18/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  43% (19/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  50% (22/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  56% (25/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  65% (29/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  75% (33/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  79% (35/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  84% (37/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  86% (38/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  88% (39/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  90% (40/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  93% (41/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  95% (42/44)   
+ DEBUG [6d5badc0] 	Resolving deltas:  97% (43/44)   
+ DEBUG [6d5badc0] 	Resolving deltas: 100% (44/44)   
+ DEBUG [6d5badc0] 	Resolving deltas: 100% (44/44), done.
+ DEBUG [6d5badc0] 	
+ DEBUG [6d5badc0] 	Checking connectivity... 
+ DEBUG [6d5badc0] 	done.
+ DEBUG [6d5badc0] 	
+  INFO [6d5badc0] Finished in 1.540 seconds with exit status 0 (successful).
+ DEBUG [cce5a48b] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [cce5a48b] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [cce5a48b] Finished in 0.612 seconds with exit status 0 (successful).
+  INFO [d15234c9] Running /usr/bin/env git remote update --prune on 45.55.220.3
+ DEBUG [d15234c9] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d15234c9] 	Fetching origin
+ DEBUG [d15234c9] 	
+ DEBUG [d15234c9] 	Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
+ DEBUG [d15234c9] 	
+  INFO [d15234c9] Finished in 1.091 seconds with exit status 0 (successful).
+ DEBUG [6e634f03] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [6e634f03] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [6e634f03] Finished in 0.643 seconds with exit status 0 (successful).
+  INFO [94e0bc1a] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203174103 on 45.55.220.3
+ DEBUG [94e0bc1a] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203174103 )
+  INFO [94e0bc1a] Finished in 0.411 seconds with exit status 0 (successful).
+  INFO [e48c058f] Running /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203174103 on 45.55.220.3
+ DEBUG [e48c058f] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203174103 )
+  INFO [e48c058f] Finished in 0.460 seconds with exit status 0 (successful).
+ DEBUG [7e313c58] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [7e313c58] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [7e313c58] Finished in 0.369 seconds with exit status 0 (successful).
+ DEBUG [f268b4b7] Running /usr/bin/env git rev-list --max-count=1 master on 45.55.220.3
+ DEBUG [f268b4b7] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f268b4b7] 	9c11146258f4446991aedb5765c814670346831f
+ DEBUG [f268b4b7] 	
+ DEBUG [f268b4b7] Finished in 0.395 seconds with exit status 0 (successful).
+ DEBUG [82be0ed2] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [82be0ed2] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi
+ DEBUG [82be0ed2] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [be809a0a] Running /usr/bin/env echo "9c11146258f4446991aedb5765c814670346831f" >> REVISION on 45.55.220.3
+ DEBUG [be809a0a] Command: cd /home/root/apps/bookshelf2/releases/20161203174103 && /usr/bin/env echo "9c11146258f4446991aedb5765c814670346831f" >> REVISION
+  INFO [be809a0a] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO [b7f05755] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203174103/public on 45.55.220.3
+ DEBUG [b7f05755] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203174103/public
+  INFO [b7f05755] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [5c20c3ca] Running [ -L /home/root/apps/bookshelf2/releases/20161203174103/public/assets ] on 45.55.220.3
+ DEBUG [5c20c3ca] Command: [ -L /home/root/apps/bookshelf2/releases/20161203174103/public/assets ]
+ DEBUG [5c20c3ca] Finished in 0.408 seconds with exit status 1 (failed).
+ DEBUG [e536372c] Running [ -d /home/root/apps/bookshelf2/releases/20161203174103/public/assets ] on 45.55.220.3
+ DEBUG [e536372c] Command: [ -d /home/root/apps/bookshelf2/releases/20161203174103/public/assets ]
+ DEBUG [e536372c] Finished in 0.408 seconds with exit status 1 (failed).
+  INFO [2653df58] Running /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203174103/public/assets on 45.55.220.3
+ DEBUG [2653df58] Command: /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203174103/public/assets
+  INFO [2653df58] Finished in 0.511 seconds with exit status 0 (successful).
+ DEBUG [9c44a9dd] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [9c44a9dd] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi
+ DEBUG [9c44a9dd] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [8f6614fb] Running /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle on 45.55.220.3
+ DEBUG [8f6614fb] Command: cd /home/root/apps/bookshelf2/releases/20161203174103 && /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem bootstrap-sass (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem bcrypt (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem will_paginate (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem bootstrap-will_paginate (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem carrierwave (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mYour Gemfile lists the gem mini_magick (>= 0) more than once.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	You should probably keep only one of them.
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31mThe following gems are missing[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rake (11.3.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * concurrent-ruby (1.0.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * i18n (0.7.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * minitest (5.9.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * thread_safe (0.3.5)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * tzinfo (1.2.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * activesupport (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * builder (3.2.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * erubis (2.7.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mini_portile2 (2.1.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * nokogiri (1.6.8.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rails-dom-testing (2.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * loofah (2.0.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rails-html-sanitizer (1.0.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * actionview (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rack (2.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rack-test (0.6.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * actionpack (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * nio4r (1.2.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * websocket-extensions (0.1.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * websocket-driver (0.6.4)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * actioncable (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * globalid (0.3.7)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * activejob (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mime-types-data (3.2016.0521)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mime-types (3.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mail (2.6.4)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * actionmailer (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * activemodel (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * arel (7.1.4)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * activerecord (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * sshkit (1.11.4)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * ansi (1.5.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * execjs (2.7.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * autoprefixer-rails (6.5.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * coderay (1.1.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * better_errors (2.1.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * sass (3.4.22)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * bootstrap-sass (3.3.7)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * will_paginate (3.1.5)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * bootstrap-will_paginate (0.0.10)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * byebug (9.0.6)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano-rails (1.2.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * puma (3.6.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * json (2.0.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * carrierwave (0.11.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * coffee-script-source (1.11.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * coffee-script (2.4.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * method_source (0.8.2)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * thor (0.19.4)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * railties (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * coffee-rails (4.2.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * ffi (1.9.14)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * multi_json (1.12.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * jbuilder (2.6.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * jquery-rails (4.2.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * listen (3.0.8)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * mini_magick (4.5.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * ruby-progressbar (1.8.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * minitest-reporters (1.1.12)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * pg (0.19.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * sprockets (3.7.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * sprockets-rails (3.2.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rails (5.0.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * rails-controller-testing (1.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * tilt (2.0.5)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * sass-rails (5.0.6)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * spring (2.0.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * turbolinks-source (5.0.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * turbolinks (5.0.1)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * uglifier (3.0.3)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[31m * web-console (3.4.0)[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [8f6614fb] 	
+ DEBUG [8f6614fb] Finished in 1.982 seconds with exit status 1 (failed).
+  INFO [3d97623a] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet on 45.55.220.3
+ DEBUG [3d97623a] Command: cd /home/root/apps/bookshelf2/releases/20161203174103 && /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet
+  INFO [3d97623a] Finished in 120.913 seconds with exit status 0 (successful).
+ DEBUG [4294c842] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [4294c842] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203174103; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203174103'" 1>&2; false; fi
+ DEBUG [4294c842] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [38cd7173] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile on 45.55.220.3
+ DEBUG [38cd7173] Command: cd /home/root/apps/bookshelf2/releases/20161203174103 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [38cd7173] 	rake aborted!
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	Bundler::GemRequireError: There was an error while trying to load the gem 'uglifier'.
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	Gem Load Error is: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	Backtrace for gem load error is:
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/uglifier-3.0.3/lib/uglifier.rb:5:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/uglifier-3.0.3/lib/uglifier.rb:5:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:91:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `block in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler.rb:106:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/config/application.rb:7:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `require_relative'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/rake_module.rb:28:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/rake_module.rb:28:in `load_rakefile'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:686:in `raw_load_rakefile'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/roo
+ DEBUG [38cd7173] 	t/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:96:in `block in load_rakefile'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:178:in `standard_exception_handling'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:95:in `load_rakefile'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:79:in `block in run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:178:in `standard_exception_handling'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/lib/rake/application.rb:77:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/bin/rake:23:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/bin/rake:23:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm
+ DEBUG [38cd7173] 	/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	Bundler Error Backtrace:
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:94:in `rescue in block (2 levels) in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:90:in `block (2 levels) in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `block in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler.rb:106:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/config/application.rb:7:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `require_relative'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bu
+ DEBUG [38cd7173] 	ndler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	ExecJS::RuntimeUnavailable: Could not find a JavaScript runtime. See https://github.com/rails/execjs for a list of available runtimes.
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs/runtimes.rb:58:in `autodetect'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:5:in `<module:ExecJS>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/execjs-2.7.0/lib/execjs.rb:4:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/uglifier-3.0.3/lib/uglifier.rb:5:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/uglifier-3.0.3/lib/uglifier.rb:5:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:91:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:91:in `block (2 levels) in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:86:in `block in require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `each'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/runtime.rb:75:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler.rb:106:in `require'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/config/application.rb:7:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `require_relative'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/releases/20161203174103/Rakefile:4:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/
+ DEBUG [38cd7173] 	gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [38cd7173] 	
+ DEBUG [38cd7173] 	(See full trace by running task with --trace)
+ DEBUG [38cd7173] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 15:02:03 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [1c152772] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [1c152772] Command: [ -d ~/.rvm ]
+ DEBUG [1c152772] Finished in 2.405 seconds with exit status 1 (failed).
+ DEBUG [3e9785b4] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [3e9785b4] Command: [ -d /usr/local/rvm ]
+ DEBUG [3e9785b4] Finished in 2.455 seconds with exit status 0 (successful).
+ DEBUG [3aa912bc] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [3aa912bc] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [3aa912bc] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [3aa912bc] 	
+ DEBUG [3aa912bc] Finished in 0.821 seconds with exit status 0 (successful).
+ DEBUG [c2d32f1b] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [c2d32f1b] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [c2d32f1b] 	ruby-2.3.0
+ DEBUG [c2d32f1b] 	
+ DEBUG [c2d32f1b] Finished in 0.582 seconds with exit status 0 (successful).
+ DEBUG [f2e325d7] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [f2e325d7] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [f2e325d7] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [f2e325d7] 	
+ DEBUG [f2e325d7] Finished in 0.746 seconds with exit status 0 (successful).
+  INFO [77836641] Running /usr/bin/env mkdir -p /tmp on 45.55.220.3
+ DEBUG [77836641] Command: /usr/bin/env mkdir -p /tmp
+  INFO [77836641] Finished in 0.392 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 100.0%
+  INFO [ce55cea5] Running /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh on 45.55.220.3
+ DEBUG [ce55cea5] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh
+  INFO [ce55cea5] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO [70721b4a] Running /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git on 45.55.220.3
+ DEBUG [70721b4a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git )
+ DEBUG [70721b4a] 	9c11146258f4446991aedb5765c814670346831f
+ DEBUG [70721b4a] 		refs/heads/master
+  INFO [70721b4a] Finished in 1.263 seconds with exit status 0 (successful).
+  INFO [2b40e223] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases on 45.55.220.3
+ DEBUG [2b40e223] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases
+  INFO [2b40e223] Finished in 0.471 seconds with exit status 0 (successful).
+  INFO [943b4221] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets on 45.55.220.3
+ DEBUG [943b4221] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets
+  INFO [943b4221] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [dfa8f2ff] Running [ -f /home/root/apps/bookshelf2/shared/puma.rb ] on 45.55.220.3
+ DEBUG [dfa8f2ff] Command: [ -f /home/root/apps/bookshelf2/shared/puma.rb ]
+ DEBUG [dfa8f2ff] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [b659f42a] Running [ -f /home/root/apps/bookshelf2/current/REVISION ] on 45.55.220.3
+ DEBUG [b659f42a] Command: [ -f /home/root/apps/bookshelf2/current/REVISION ]
+ DEBUG [b659f42a] Finished in 0.510 seconds with exit status 1 (failed).
+ DEBUG [0e60f541] Running [ -f /home/root/apps/bookshelf2/repo/HEAD ] on 45.55.220.3
+ DEBUG [0e60f541] Command: [ -f /home/root/apps/bookshelf2/repo/HEAD ]
+ DEBUG [0e60f541] Finished in 0.508 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/root/apps/bookshelf2/repo
+ DEBUG [6f1bab04] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [6f1bab04] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [6f1bab04] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [f6da7644] Running /usr/bin/env git remote update --prune on 45.55.220.3
+ DEBUG [f6da7644] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f6da7644] 	Fetching origin
+ DEBUG [f6da7644] 	
+  INFO [f6da7644] Finished in 1.205 seconds with exit status 0 (successful).
+ DEBUG [f9c6ba39] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [f9c6ba39] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [f9c6ba39] Finished in 0.532 seconds with exit status 0 (successful).
+  INFO [102110a3] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203180215 on 45.55.220.3
+ DEBUG [102110a3] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203180215 )
+  INFO [102110a3] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [947cd57d] Running /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203180215 on 45.55.220.3
+ DEBUG [947cd57d] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203180215 )
+  INFO [947cd57d] Finished in 0.603 seconds with exit status 0 (successful).
+ DEBUG [3fadc6a5] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [3fadc6a5] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [3fadc6a5] Finished in 0.419 seconds with exit status 0 (successful).
+ DEBUG [be1e48fe] Running /usr/bin/env git rev-list --max-count=1 master on 45.55.220.3
+ DEBUG [be1e48fe] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [be1e48fe] 	9c11146258f4446991aedb5765c814670346831f
+ DEBUG [be1e48fe] 	
+ DEBUG [be1e48fe] Finished in 0.352 seconds with exit status 0 (successful).
+ DEBUG [43cd2fac] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [43cd2fac] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi
+ DEBUG [43cd2fac] Finished in 0.291 seconds with exit status 0 (successful).
+  INFO [418a8f73] Running /usr/bin/env echo "9c11146258f4446991aedb5765c814670346831f" >> REVISION on 45.55.220.3
+ DEBUG [418a8f73] Command: cd /home/root/apps/bookshelf2/releases/20161203180215 && /usr/bin/env echo "9c11146258f4446991aedb5765c814670346831f" >> REVISION
+  INFO [418a8f73] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO [0d7eab90] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203180215/public on 45.55.220.3
+ DEBUG [0d7eab90] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203180215/public
+  INFO [0d7eab90] Finished in 0.395 seconds with exit status 0 (successful).
+ DEBUG [77bba00a] Running [ -L /home/root/apps/bookshelf2/releases/20161203180215/public/assets ] on 45.55.220.3
+ DEBUG [77bba00a] Command: [ -L /home/root/apps/bookshelf2/releases/20161203180215/public/assets ]
+ DEBUG [77bba00a] Finished in 0.406 seconds with exit status 1 (failed).
+ DEBUG [e12ac725] Running [ -d /home/root/apps/bookshelf2/releases/20161203180215/public/assets ] on 45.55.220.3
+ DEBUG [e12ac725] Command: [ -d /home/root/apps/bookshelf2/releases/20161203180215/public/assets ]
+ DEBUG [e12ac725] Finished in 0.354 seconds with exit status 1 (failed).
+  INFO [720a09c0] Running /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203180215/public/assets on 45.55.220.3
+ DEBUG [720a09c0] Command: /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203180215/public/assets
+  INFO [720a09c0] Finished in 0.364 seconds with exit status 0 (successful).
+ DEBUG [fcd44e25] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [fcd44e25] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi
+ DEBUG [fcd44e25] Finished in 0.420 seconds with exit status 0 (successful).
+ DEBUG [f2636465] Running /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle on 45.55.220.3
+ DEBUG [f2636465] Command: cd /home/root/apps/bookshelf2/releases/20161203180215 && /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem bootstrap-sass (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem bcrypt (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem will_paginate (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem bootstrap-will_paginate (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem carrierwave (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mYour Gemfile lists the gem mini_magick (>= 0) more than once.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	You should probably keep only one of them.
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31mThe following gems are missing[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * sshkit (1.11.4)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * ansi (1.5.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * autoprefixer-rails (6.5.3)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * coderay (1.1.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * better_errors (2.1.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * bootstrap-sass (3.3.7)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * will_paginate (3.1.5)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * bootstrap-will_paginate (0.0.10)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * byebug (9.0.6)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano-rails (1.2.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * json (2.0.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * carrierwave (0.11.2)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * ffi (1.9.14)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * listen (3.0.8)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * mini_magick (4.5.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * ruby-progressbar (1.8.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * minitest-reporters (1.1.12)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * rails-controller-testing (1.0.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * spring (2.0.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[31m * web-console (3.4.0)[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [f2636465] 	
+ DEBUG [f2636465] Finished in 1.658 seconds with exit status 1 (failed).
+  INFO [c817e431] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet on 45.55.220.3
+ DEBUG [c817e431] Command: cd /home/root/apps/bookshelf2/releases/20161203180215 && /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet
+  INFO [c817e431] Finished in 5.493 seconds with exit status 0 (successful).
+ DEBUG [7430a16d] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [7430a16d] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203180215; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203180215'" 1>&2; false; fi
+ DEBUG [7430a16d] Finished in 0.406 seconds with exit status 0 (successful).
+  INFO [d7e613b4] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile on 45.55.220.3
+ DEBUG [d7e613b4] Command: cd /home/root/apps/bookshelf2/releases/20161203180215 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [d7e613b4] 	I, [2016-12-03T18:02:33.966083 #16785]  INFO -- : Writing /home/root/apps/bookshelf2/releases/20161203180215/public/assets/rails-c094bc3a4bf50e5bb477109e5cb0d213af27ad75b481c4df249f50974dbeefe6.png
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	I, [2016-12-03T18:02:33.974953 #16785]  INFO -- : Writing /home/root/apps/bookshelf2/releases/20161203180215/public/assets/read-bookshelf-dab6cff5060a060e14c3956bb8a001c2ec8a89450b40976fb01fc9008db4294f.jpg
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	rake aborted!
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	Sprockets::FileNotFound: couldn't find file 'bootstrap' with type 'application/javascript'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	Checked in these paths: 
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/app/assets/config
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/app/assets/images
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/app/assets/javascripts
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/app/assets/stylesheets
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/vendor/assets/javascripts
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/releases/20161203180215/vendor/assets/stylesheets
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/releases/20161203180215/app/assets/javascripts/application.js:17
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/resolve.rb:65:in `resolve!'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:399:in `resolve'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:207:in `process_require_directive'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:180:in `block in process_directives'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:178:in `each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:178:in `process_directives'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:83:in `_call'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/directive_processor.rb:68:in `call'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/hom
+ DEBUG [d7e613b4] 	e/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:23:in `block in call'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/utils.rb:196:in `dfs'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:24:in `call'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-
+ DEBUG [d7e613b4] 	3.7.0/lib/sprockets/base.rb:66:in `find_asset'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:142:in `block in find'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `stat_directory'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:227:in `stat_tree'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `block in logical_paths'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `each'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `logical_paths'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:140:in `find'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:185:in `compile'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/rake/sprocketstask.rb:147:in `with_logger'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/s
+ DEBUG [d7e613b4] 	hared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	Tasks: TOP => assets:precompile
+ DEBUG [d7e613b4] 	
+ DEBUG [d7e613b4] 	(See full trace by running task with --trace)
+ DEBUG [d7e613b4] 	
