@@ -1225,3 +1225,573 @@
  DEBUG [d7e613b4] 	
  DEBUG [d7e613b4] 	(See full trace by running task with --trace)
  DEBUG [d7e613b4] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-12-03 15:13:24 -0300 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6845badf] Running [ -d ~/.rvm ] on 45.55.220.3
+ DEBUG [6845badf] Command: [ -d ~/.rvm ]
+ DEBUG [6845badf] Finished in 2.488 seconds with exit status 1 (failed).
+ DEBUG [9cd082b3] Running [ -d /usr/local/rvm ] on 45.55.220.3
+ DEBUG [9cd082b3] Command: [ -d /usr/local/rvm ]
+ DEBUG [9cd082b3] Finished in 2.613 seconds with exit status 0 (successful).
+ DEBUG [acb7fc67] Running /usr/local/rvm/bin/rvm version on 45.55.220.3
+ DEBUG [acb7fc67] Command: /usr/local/rvm/bin/rvm version
+ DEBUG [acb7fc67] 	rvm 1.27.0 (latest) by Wayne E. Seguin <wayneeseguin@gmail.com>, Michal Papis <mpapis@gmail.com> [https://rvm.io/]
+ DEBUG [acb7fc67] 	
+ DEBUG [acb7fc67] Finished in 0.605 seconds with exit status 0 (successful).
+ DEBUG [943d590a] Running /usr/local/rvm/bin/rvm current on 45.55.220.3
+ DEBUG [943d590a] Command: /usr/local/rvm/bin/rvm current
+ DEBUG [943d590a] 	ruby-2.3.0
+ DEBUG [943d590a] 	
+ DEBUG [943d590a] Finished in 0.642 seconds with exit status 0 (successful).
+ DEBUG [1ae1038e] Running /usr/local/rvm/bin/rvm default do ruby --version on 45.55.220.3
+ DEBUG [1ae1038e] Command: /usr/local/rvm/bin/rvm default do ruby --version
+ DEBUG [1ae1038e] 	ruby 2.3.0p0 (2015-12-25 revision 53290) [x86_64-linux]
+ DEBUG [1ae1038e] 	
+ DEBUG [1ae1038e] Finished in 0.830 seconds with exit status 0 (successful).
+  INFO [eb99e02f] Running /usr/bin/env mkdir -p /tmp on 45.55.220.3
+ DEBUG [eb99e02f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [eb99e02f] Finished in 0.392 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 0.0%
+  INFO Uploading /tmp/git-ssh-bookshelf2-production-breadwave.sh 100.0%
+  INFO [1a5a31c7] Running /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh on 45.55.220.3
+ DEBUG [1a5a31c7] Command: /usr/bin/env chmod 700 /tmp/git-ssh-bookshelf2-production-breadwave.sh
+  INFO [1a5a31c7] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [9520f05e] Running /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git on 45.55.220.3
+ DEBUG [9520f05e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git ls-remote --heads git@github.com:breadwave/bookshelf2.git )
+ DEBUG [9520f05e] 	0a68859bfeda8ceb2be1cd6fbcd68b86a2480401	refs/heads/master
+  INFO [9520f05e] Finished in 1.100 seconds with exit status 0 (successful).
+  INFO [cca2bf4d] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases on 45.55.220.3
+ DEBUG [cca2bf4d] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared /home/root/apps/bookshelf2/releases
+  INFO [cca2bf4d] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [75e58c2b] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets on 45.55.220.3
+ DEBUG [75e58c2b] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/shared/public/assets
+  INFO [75e58c2b] Finished in 0.305 seconds with exit status 0 (successful).
+ DEBUG [8a17f2b5] Running [ -f /home/root/apps/bookshelf2/shared/puma.rb ] on 45.55.220.3
+ DEBUG [8a17f2b5] Command: [ -f /home/root/apps/bookshelf2/shared/puma.rb ]
+ DEBUG [8a17f2b5] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [1e2b3791] Running [ -f /home/root/apps/bookshelf2/current/REVISION ] on 45.55.220.3
+ DEBUG [1e2b3791] Command: [ -f /home/root/apps/bookshelf2/current/REVISION ]
+ DEBUG [1e2b3791] Finished in 0.290 seconds with exit status 1 (failed).
+ DEBUG [f504b46b] Running [ -f /home/root/apps/bookshelf2/repo/HEAD ] on 45.55.220.3
+ DEBUG [f504b46b] Command: [ -f /home/root/apps/bookshelf2/repo/HEAD ]
+ DEBUG [f504b46b] Finished in 0.410 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/root/apps/bookshelf2/repo
+ DEBUG [bdfa7684] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [bdfa7684] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [bdfa7684] Finished in 0.420 seconds with exit status 0 (successful).
+  INFO [266d58b8] Running /usr/bin/env git remote update --prune on 45.55.220.3
+ DEBUG [266d58b8] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [266d58b8] 	Fetching origin
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	remote: Counting objects: 8, done.[K
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	remote: Compressing objects:  50% (1/2)   [K
+ DEBUG [266d58b8] 	remote: Compressing objects: 100% (2/2)   [K
+ DEBUG [266d58b8] 	remote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	remote: Total 8 (delta 6), reused 8 (delta 6), pack-reused 0[K
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	Unpacking objects:  12% (1/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  25% (2/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  37% (3/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  50% (4/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  62% (5/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  75% (6/8)   
+ DEBUG [266d58b8] 	Unpacking objects:  87% (7/8)   
+ DEBUG [266d58b8] 	Unpacking objects: 100% (8/8)   
+ DEBUG [266d58b8] 	Unpacking objects: 100% (8/8), done.
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	From github.com:breadwave/bookshelf2
+ DEBUG [266d58b8] 	
+ DEBUG [266d58b8] 	   9c11146..0a68859  master     -> master
+ DEBUG [266d58b8] 	
+  INFO [266d58b8] Finished in 1.430 seconds with exit status 0 (successful).
+ DEBUG [72535abc] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [72535abc] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [72535abc] Finished in 0.604 seconds with exit status 0 (successful).
+  INFO [5985f7e3] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203181335 on 45.55.220.3
+ DEBUG [5985f7e3] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203181335 )
+  INFO [5985f7e3] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [4e67305d] Running /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203181335 on 45.55.220.3
+ DEBUG [4e67305d] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/root/apps/bookshelf2/releases/20161203181335 )
+  INFO [4e67305d] Finished in 0.474 seconds with exit status 0 (successful).
+ DEBUG [14f03efe] Running if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [14f03efe] Command: if test ! -d /home/root/apps/bookshelf2/repo; then echo "Directory does not exist '/home/root/apps/bookshelf2/repo'" 1>&2; false; fi
+ DEBUG [14f03efe] Finished in 0.442 seconds with exit status 0 (successful).
+ DEBUG [d6675cf1] Running /usr/bin/env git rev-list --max-count=1 master on 45.55.220.3
+ DEBUG [d6675cf1] Command: cd /home/root/apps/bookshelf2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-bookshelf2-production-breadwave.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d6675cf1] 	0a68859bfeda8ceb2be1cd6fbcd68b86a2480401
+ DEBUG [d6675cf1] 	
+ DEBUG [d6675cf1] Finished in 0.410 seconds with exit status 0 (successful).
+ DEBUG [5cf74680] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [5cf74680] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi
+ DEBUG [5cf74680] Finished in 0.404 seconds with exit status 0 (successful).
+  INFO [979115a5] Running /usr/bin/env echo "0a68859bfeda8ceb2be1cd6fbcd68b86a2480401" >> REVISION on 45.55.220.3
+ DEBUG [979115a5] Command: cd /home/root/apps/bookshelf2/releases/20161203181335 && /usr/bin/env echo "0a68859bfeda8ceb2be1cd6fbcd68b86a2480401" >> REVISION
+  INFO [979115a5] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO [8001cfc7] Running /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203181335/public on 45.55.220.3
+ DEBUG [8001cfc7] Command: /usr/bin/env mkdir -p /home/root/apps/bookshelf2/releases/20161203181335/public
+  INFO [8001cfc7] Finished in 0.409 seconds with exit status 0 (successful).
+ DEBUG [b5d58250] Running [ -L /home/root/apps/bookshelf2/releases/20161203181335/public/assets ] on 45.55.220.3
+ DEBUG [b5d58250] Command: [ -L /home/root/apps/bookshelf2/releases/20161203181335/public/assets ]
+ DEBUG [b5d58250] Finished in 0.408 seconds with exit status 1 (failed).
+ DEBUG [b7061e04] Running [ -d /home/root/apps/bookshelf2/releases/20161203181335/public/assets ] on 45.55.220.3
+ DEBUG [b7061e04] Command: [ -d /home/root/apps/bookshelf2/releases/20161203181335/public/assets ]
+ DEBUG [b7061e04] Finished in 0.409 seconds with exit status 1 (failed).
+  INFO [47f0196d] Running /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203181335/public/assets on 45.55.220.3
+ DEBUG [47f0196d] Command: /usr/bin/env ln -s /home/root/apps/bookshelf2/shared/public/assets /home/root/apps/bookshelf2/releases/20161203181335/public/assets
+  INFO [47f0196d] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [32f724e9] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [32f724e9] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi
+ DEBUG [32f724e9] Finished in 0.407 seconds with exit status 0 (successful).
+ DEBUG [ca5d8bd5] Running /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle on 45.55.220.3
+ DEBUG [ca5d8bd5] Command: cd /home/root/apps/bookshelf2/releases/20161203181335 && /usr/local/rvm/bin/rvm default do bundle check --path /home/root/apps/bookshelf2/shared/bundle
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem bootstrap-sass (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem bcrypt (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem will_paginate (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem bootstrap-will_paginate (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem carrierwave (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mYour Gemfile lists the gem mini_magick (>= 0) more than once.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	You should probably keep only one of them.
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	While it's not a problem now, it could cause errors if you change the version of one of them later.[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31mThe following gems are missing[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * net-ssh (3.2.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * net-scp (1.2.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * sshkit (1.11.4)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * airbrussh (1.1.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * ansi (1.5.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * autoprefixer-rails (6.5.3)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * bcrypt (3.1.11)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * coderay (1.1.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * better_errors (2.1.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * debug_inspector (0.0.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * binding_of_caller (0.7.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * bootstrap-sass (3.3.7)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * will_paginate (3.1.5)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * bootstrap-will_paginate (0.0.10)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * byebug (9.0.6)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano-harrow (0.5.3)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano (3.6.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano-bundler (1.2.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano-rails (1.2.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano-rvm (0.1.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * capistrano3-puma (1.2.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * json (2.0.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * mimemagic (0.3.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * carrierwave (0.11.2)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * ffi (1.9.14)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * rb-fsevent (0.9.8)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * rb-inotify (0.9.7)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * listen (3.0.8)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * mini_magick (4.5.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * ruby-progressbar (1.8.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * minitest-reporters (1.1.12)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * rails-controller-testing (1.0.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * spring (2.0.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * spring-watcher-listen (2.0.1)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[31m * web-console (3.4.0)[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] 	[33mInstall missing gems with `bundle install`[0m
+ DEBUG [ca5d8bd5] 	
+ DEBUG [ca5d8bd5] Finished in 1.376 seconds with exit status 1 (failed).
+  INFO [c9fbd13c] Running /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet on 45.55.220.3
+ DEBUG [c9fbd13c] Command: cd /home/root/apps/bookshelf2/releases/20161203181335 && /usr/local/rvm/bin/rvm default do bundle install --path /home/root/apps/bookshelf2/shared/bundle --without development test --deployment --quiet
+  INFO [c9fbd13c] Finished in 4.458 seconds with exit status 0 (successful).
+ DEBUG [f6bac239] Running if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi on 45.55.220.3
+ DEBUG [f6bac239] Command: if test ! -d /home/root/apps/bookshelf2/releases/20161203181335; then echo "Directory does not exist '/home/root/apps/bookshelf2/releases/20161203181335'" 1>&2; false; fi
+ DEBUG [f6bac239] Finished in 0.407 seconds with exit status 0 (successful).
+  INFO [73a82f79] Running /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile on 45.55.220.3
+ DEBUG [73a82f79] Command: cd /home/root/apps/bookshelf2/releases/20161203181335 && ( export RAILS_ENV="production" ; /usr/local/rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [73a82f79] 	I, [2016-12-03T18:13:59.154809 #18099]  INFO -- : Writing /home/root/apps/bookshelf2/releases/20161203181335/public/assets/application-ce22bff5d436965b8b73919de8882ddcd1602a2b592e45c0d363d2aa61df5e3d.js
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	I, [2016-12-03T18:13:59.156175 #18099]  INFO -- : Writing /home/root/apps/bookshelf2/releases/20161203181335/public/assets/application-ce22bff5d436965b8b73919de8882ddcd1602a2b592e45c0d363d2aa61df5e3d.js.gz
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	rake aborted!
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	Sass::SyntaxError: File to import not found or unreadable: bootstrap-sprockets.
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	Load paths:
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/config
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/images
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/stylesheets
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/vendor/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/vendor/assets/stylesheets
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/releases/20161203181335/app/assets/stylesheets/custom.scss:1
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/rub
+ DEBUG [73a82f79] 	y/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-rails-5.0.6/lib/sass/rails/template.rb:47:in `evaluate'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/tilt-2.0.5/lib/tilt/template.rb:102:in `render'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby
+ DEBUG [73a82f79] 	/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:23:in `block in call'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/utils.rb:196:in `dfs'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:24:in `call'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb
+ DEBUG [73a82f79] 	:20:in `block in initialize'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/base.rb:66:in `find_asset'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:142:in `block in find'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `each'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `stat_directory'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:227:in `stat_tree'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `each'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `block in logical_paths'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `each'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `logical_paths'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:140:in `find'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:185:in `compile'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/rake/sprocketstask.rb:147:in `with_logger'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [73a82f79] 	
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+ DEBUG [73a82f79] 	
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+Sass::SyntaxError: File to import not found or unreadable: bootstrap-sprockets.
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	Load paths:
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/config
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/images
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/javascripts
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/releases/20161203181335/app/assets/stylesheets
+ DEBUG [73a82f79] 	
+  /home/root/apps/bookshelf2/releases/20161203181335/vendor/assets/javascripts
+  /home/root/apps/bookshelf2/releases/20161203181335/vendor/assets/stylesheets
+  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/jquery-rails-4.2.1/vendor/assets/javascripts
+  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/coffee-rails-4.2.1/lib/assets/javascripts
+ DEBUG [73a82f79] 	  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/actioncable-5.0.0.1/lib/assets/compiled
+  /home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:65:in `import'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home
+ DEBUG [73a82f79] 	/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:20:in `render'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-3.4.22/lib/sass/engine.rb:281:in `render'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sass-rails-5.0.6/lib/sass/rails/template.rb:47:in `evaluate'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/tilt-2.0.5/lib/tilt/template.rb:102:in `render'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy_tilt_processor.rb:25:in `call'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:23:in `block in call'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/utils.rb:196:in `dfs'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/bundle.rb:24:in `call'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:75:in `call_processor'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:57:in `block in call_processors'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `reverse_each'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/processor_utils.rb:56:in `call_processors'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:134:in `load_from_unloaded'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:60:in `block in load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:317:in `fetch_asset_from_dependency_cache'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/loader.rb:44:in `load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:20:in `block in initialize'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/cached_environment.rb:47:in `load'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/base.rb:66:in `find_asset'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/base.rb:73:in `find_all_linked_assets'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:142:in `block in find'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:114:in `block (2 levels) in logical_paths'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:228:in `block in stat_tree'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:212:in `block in stat_directory'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `each'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:209:in `stat_directory'
+ DEBUG [73a82f79] 	
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/path_utils.rb:227:in `stat_tree'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `each'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:105:in `block in logical_paths'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `each'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/legacy.rb:104:in `logical_paths'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:140:in `find'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/sprockets/manifest.rb:185:in `compile'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:68:in `block (3 levels) in define'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-3.7.0/lib/rake/sprocketstask.rb:147:in `with_logger'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/sprockets-rails-3.2.0/lib/sprockets/rails/task.rb:67:in `block (2 levels) in define'
+/home/root/apps/bookshelf2/shared/bundle/ruby/2.3.0/gems/rake-11.3.0/exe/rake:27:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `load'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:74:in `kernel_load'
+ DEBUG [73a82f79] 	
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli/exec.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:332:in `exec'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/command.rb:27:in `run'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/invocation.rb:126:in `invoke_command'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor.rb:359:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:20:in `dispatch'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/vendor/thor/lib/thor/base.rb:440:in `start'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/cli.rb:11:in `start'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:34:in `block in <top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/lib/bundler/friendly_errors.rb:100:in `with_friendly_errors'
+ DEBUG [73a82f79] 	
+/usr/local/rvm/gems/ruby-2.3.0/gems/bundler-1.13.6/exe/bundle:26:in `<top (required)>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `load'
+/usr/local/rvm/gems/ruby-2.3.0/bin/bundle:23:in `<main>'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `eval'
+/usr/local/rvm/gems/ruby-2.3.0/bin/ruby_executable_hooks:15:in `<main>'
+Tasks: TOP => assets:precompile
+ DEBUG [73a82f79] 	
+ DEBUG [73a82f79] 	(See full trace by running task with --trace)
+ DEBUG [73a82f79] 	
